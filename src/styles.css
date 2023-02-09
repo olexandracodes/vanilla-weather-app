@@ -102,6 +102,16 @@ li .degrees {
   font-size: 40px;
   margin: 0;
 }
+
+.degrees .active {
+  color: #ffebbc;
+  cursor: default;
+  text-decoration: none;
+}
+.degrees .active:hover {
+  text-decoration: none;
+}
+
 #feels_like {
   font-style: italic;
   opacity: 80%;

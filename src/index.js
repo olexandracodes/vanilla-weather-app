@@ -38,7 +38,6 @@ function sun(timestamp) {
 function showTemperature(response) {
   console.log(response.data);
   let pageCity = document.querySelector("#shown-city");
-  let temperature = Math.round(response.data.main.temp);
   let degrees = document.querySelector("#degree");
   let description = document.querySelector("#weather-description");
   let feelsElement = document.querySelector("#feels_like");
@@ -53,8 +52,9 @@ function showTemperature(response) {
   let todayMaxTemp = document.querySelector("#today-temp-max");
   let iconElement = document.querySelector("#today-icon");
 
+  celsiusTemperature = response.data.main.temp;
   pageCity.innerHTML = response.data.name;
-  degrees.innerHTML = temperature;
+  degrees.innerHTML = Math.round(celsiusTemperature);
   description.innerHTML = response.data.weather[0].main;
   feelsElement.innerHTML = `feels like ${feelsLike} °C`;
   humidityElement.innerHTML = `${response.data.main.humidity} %`;
@@ -84,5 +84,28 @@ function showCity(event) {
   search(userCity.value);
 }
 
+function toFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#degree");
+  celTemp.classList.remove("active");
+  farTemp.classList.add("active");
+  let newFTemp = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(newFTemp);
+}
+function toCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#degree");
+  celTemp.classList.add("active");
+  farTemp.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let changeButton = document.querySelector("#city-form");
 changeButton.addEventListener("submit", showCity);
+
+let farTemp = document.querySelector("#f-temp");
+farTemp.addEventListener("click", toFahrenheit);
+let celTemp = document.querySelector("#c-temp");
+celTemp.addEventListener("click", toCelsius);
