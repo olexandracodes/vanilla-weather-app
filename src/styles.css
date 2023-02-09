@@ -1,3 +1,6 @@
+body {
+  background-color: black;
+}
 .page-container {
   background-image: url(../images/wow.jpg);
   background-size: 100%;
@@ -55,6 +58,10 @@
   color: #292830;
   font-style: normal;
 }
+#today-temp-max {
+  color: black;
+  font-weight: 700;
+}
 
 .city-time,
 .list-group-item {
@@ -93,7 +100,7 @@ li .degrees {
   font-size: 40px;
   margin: 0;
 }
-.card-text {
+#feels_like {
   font-style: italic;
   opacity: 80%;
   text-align: right;
@@ -102,6 +109,18 @@ li .degrees {
 .info {
   text-align: center;
   padding: 10px;
+}
+
+#wind-speed,
+#humidity-value {
+  font-size: 60px;
+  color: #fae2ab;
+}
+
+#sunrise,
+#sunset {
+  font-size: 32px;
+  color: #fae2ab;
 }
 
 #location-button {

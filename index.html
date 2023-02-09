@@ -59,7 +59,8 @@
                     <div class="card days-body">
                       <div class="card-body">
                         <h3 class="week">Today</h3>
-                        <small>min</small> max
+                        <small id="today-temp-min">min</small>
+                        <span id="today-temp-max">max</span>
                         <i
                           class="fa-solid fa-temperature-three-quarters"
                           id="today-icon"
@@ -105,8 +106,7 @@
                   </li>
                 </ul>
                 <p class="signature">
-                  <a
-                    href="https://github.com/olexandracodes/vanilla-weather-app"
+                  <a href="https://github.com/olexandracodes/weather-app"
                     >Open-source code</a
                   >
                   by Olexandra Kunytska
@@ -128,7 +128,7 @@
                       >
                     </li>
                     <li id="weather-description">Weather</li>
-                    <li class="card-text">feels like</li>
+                    <li id="feels_like">feels like 24</li>
                   </ul>
                 </div>
 
@@ -136,11 +136,11 @@
                   <div class="row info">
                     <div class="col">
                       Wind <br />
-                      <span id="wind">m/s</span>
+                      <span id="wind-speed">00 m/s</span>
                     </div>
                     <div class="col">
                       Humidity<br />
-                      <span id="humidity">%</span>
+                      <span id="humidity-value">00%</span>
                     </div>
                     <div class="col row-cols-2">
                       <div class="col">
