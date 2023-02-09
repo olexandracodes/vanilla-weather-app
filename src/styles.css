@@ -52,6 +52,9 @@ body {
   margin: 12px;
   color: #292830;
 }
+#city-form {
+  margin-bottom: 16px;
+}
 
 .week {
   margin: 20px 44px 20px 8px;
@@ -76,9 +79,7 @@ body {
 }
 
 .btn {
-  position: relative;
-  top: 2px;
-  left: 220px;
+  display: inline;
 }
 
 .day-info {

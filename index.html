@@ -27,26 +27,32 @@
             <div class="col-4 weather">
               <div class="city-container">
                 <form id="city-form">
-                  <div class="mb-3 city-form">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="city-input"
-                      placeholder="Find your city"
-                      autocapitalize="off"
-                    />
+                  <div class="row">
+                    <div class="col-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="city-input"
+                        placeholder="Find your city"
+                        autocapitalize="off"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="submit"
+                        value="Change"
+                        class="btn btn-outline-dark"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="button"
+                        value="Current"
+                        id="location-button"
+                        class="btn btn-outline-warning"
+                      />
+                    </div>
                   </div>
-
-                  <button
-                    type="button"
-                    id="location-button"
-                    class="btn btn-outline-warning"
-                  >
-                    Current
-                  </button>
-                  <button type="submit" class="btn btn-outline-dark">
-                    Change
-                  </button>
                 </form>
 
                 <h2 class="city-name" id="shown-city">City</h2>
