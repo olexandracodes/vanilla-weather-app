@@ -1,3 +1,5 @@
+// Time
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -36,6 +38,7 @@ function sun(timestamp) {
 }
 
 function showTemperature(response) {
+  console.log(response.data);
   let pageCity = document.querySelector("#shown-city");
   let temperature = Math.round(response.data.main.temp);
   let degrees = document.querySelector("#degree");
@@ -50,6 +53,7 @@ function showTemperature(response) {
   let sunsetHours = document.querySelector("#sunset");
   let todayMinTemp = document.querySelector("#today-temp-min");
   let todayMaxTemp = document.querySelector("#today-temp-max");
+  let iconElement = document.querySelector("#today-icon");
 
   pageCity.innerHTML = response.data.name;
   degrees.innerHTML = temperature;
@@ -62,11 +66,16 @@ function showTemperature(response) {
   sunsetHours.innerHTML = sun(response.data.sys.sunset * 1000);
   todayMinTemp.innerHTML = `min ${Math.round(response.data.main.temp_min)}°`;
   todayMaxTemp.innerHTML = `max ${Math.round(response.data.main.temp_max)}°`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
 let apiKey = "4a9226e32b5fb3eb0ec3575c32bb69f3";
 let units = "metric";
-let city = "Kyiv";
+let city = "Paris";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
 axios.get(apiUrl).then(showTemperature);
