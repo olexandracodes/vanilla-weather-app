@@ -47,12 +47,12 @@
                   </div>
                 </form>
 
-                <h2 class="city-name" id="shown-city">City</h2>
+                <h2 class="city-name" id="city-name">City</h2>
                 <h4 class="city-time">Time</h4>
               </div>
 
               <div class="card days-container">
-                <ul class="list-group list-group-flush days-list">
+                <ul class="list-group list-group-flush days-list" id="forecast">
                   <li class="list-group-item">
                     <div class="card days-body">
                       <div class="card-body">
@@ -60,51 +60,16 @@
                         <small id="today-temp-min">min</small>
                         <span id="today-temp-max">max</span>
                         <img
-                          src="http://openweathermap.org/img/wn/10d@2x.png"
+                          src="https://openweathermap.org/img/wn/10d@2x.png"
                           alt="Clear"
                           id="today-icon"
-                          width="16%"
+                          width="12%"
                         />
                       </div>
                     </div>
                   </li>
-                  <li class="list-group-item">
-                    <div class="card days-body">
-                      <div class="card-body">
-                        <h3 class="week">Thursday</h3>
-                        min max
-                        <i class="fa-solid fa-temperature-three-quarters"></i>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="card days-body">
-                      <div class="card-body">
-                        <h3 class="week">Friday</h3>
-                        min max
-                        <i class="fa-solid fa-temperature-three-quarters"></i>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="card days-body">
-                      <div class="card-body">
-                        <h3 class="week">Saturday</h3>
-                        min max
-                        <i class="fa-solid fa-temperature-three-quarters"></i>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="card days-body">
-                      <div class="card-body">
-                        <h3 class="week">Sunday</h3>
-                        min max
-                        <i class="fa-solid fa-temperature-three-quarters"></i>
-                      </div>
-                    </div>
-                  </li>
                 </ul>
+
                 <p class="signature">
                   <a href="https://github.com/olexandracodes/weather-app"
                     >Open-source code</a
