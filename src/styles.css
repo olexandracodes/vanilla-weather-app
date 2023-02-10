@@ -3,7 +3,7 @@ body {
 }
 .page-container {
   background-image: url(../images/wow.jpg);
-  background-size: 100%;
+  background-size: contain;
 }
 .card-img {
   max-height: 440px;
@@ -34,16 +34,15 @@ body {
 .city-container,
 .days-container {
   margin: 18px 8px;
-  border: 1px solid none;
-  border-radius: 10px;
   box-shadow: 0px 5px 20px 12px rgba(41, 40, 48, 0.3);
+  border-radius: 10px;
 }
 .days-body {
   background: linear-gradient(
-    93.1deg,
-    rgb(238, 254, 183) 19.1%,
+    22.1deg,
+    rgb(253, 251, 251) 19.1%,
     rgb(169, 254, 222) 53.9%,
-    rgb(90, 222, 255) 92%
+    rgb(238, 254, 183) 92%
   );
 }
 .city-name {
@@ -61,7 +60,7 @@ body {
   display: inline;
   color: #292830;
   font-style: normal;
-  font-size: 24px;
+  font-size: 26px;
 }
 #today-temp-max {
   color: black;
@@ -73,6 +72,11 @@ body {
   display: inline;
   font-style: italic;
   opacity: 80%;
+}
+li.list-group-item {
+  background-color: rgba(95, 95, 94, 0.26);
+  border-radius: 44px;
+  padding: 2px;
 }
 .city-time {
   color: #292830;
@@ -91,7 +95,7 @@ body {
 
 #weather-description,
 .card-title {
-  color: #ffebbc;
+  color: rgb(238, 254, 183);
   font-size: 128px;
   text-align: right;
 }
@@ -103,15 +107,6 @@ li .degrees {
   margin: 0;
 }
 
-.degrees .active {
-  color: #ffebbc;
-  cursor: default;
-  text-decoration: none;
-}
-.degrees .active:hover {
-  text-decoration: none;
-}
-
 #feels_like {
   font-style: italic;
   opacity: 80%;
@@ -121,6 +116,10 @@ li .degrees {
 .info {
   text-align: center;
   padding: 10px;
+}
+
+.today-info-container {
+  color: rgb(238, 254, 183);
 }
 
 #wind-speed,
