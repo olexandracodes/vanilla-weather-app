@@ -7,7 +7,7 @@ This is a **weather application** built using **HTML, CSS, JavaScript**, and **B
 ## Features
 
 - **Real-time weather updates**: Shows the current temperature, weather description, and "feels like" temperature.
-- **7-day forecast**: Displays the weather forecast for the upcoming week.
+- **4-day forecast**: Displays the weather forecast for the upcoming week.
 - **Sunrise and sunset times**: Provides the exact times for sunrise and sunset for the selected city.
 - **Wind speed and humidity**: Shows wind speed (m/s) and humidity percentage.
 - **Responsive design**: Optimized for both desktop and mobile views.
@@ -23,13 +23,13 @@ This is a **weather application** built using **HTML, CSS, JavaScript**, and **B
 ## Usage of Open APIs
 
 - **OpenWeatherMap API**: Used to retrieve the current weather information such as temperature, weather conditions, wind speed, and humidity based on the user's input (city name).
-- **SheCodes Weather API**: Used to fetch the 7-day weather forecast data, including minimum and maximum temperatures, and weather icons for each day of the week.
+- **SheCodes Weather API**: Used to fetch the 4-day weather forecast data, including minimum and maximum temperatures, and weather icons for each day of the week.
 
 ## How to Use
 
 1. Input the name of a city in the search bar.
 2. Click the "Change" button or press Enter to view the weather data for the selected city.
-3. The app will display current weather conditions, including temperature, "feels like" temperature, and wind speed, as well as a 7-day forecast.
+3. The app will display current weather conditions, including temperature, "feels like" temperature, and wind speed, as well as a 4-day forecast.
 
 <div align="center">
   <img src="images/vanilla-weather-app.png" alt="Desktop Homepage" width="400"/>
