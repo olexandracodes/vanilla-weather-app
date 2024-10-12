@@ -1,4 +1,4 @@
-# Weather App
+# Weather App (December 2022)
 
 [Live Demo](https://vanilla-weather-app-rust.vercel.app/)
 
